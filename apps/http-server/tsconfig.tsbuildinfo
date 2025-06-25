@@ -1,0 +1,1 @@
+{"root":["./src/index.ts","./src/controllers/room.controller.ts","./src/controllers/stroke.controller.ts","./src/routes/room.route.ts","./src/routes/stroke.route.ts","./src/utils/asyncHandler.ts"],"version":"5.8.2"}
