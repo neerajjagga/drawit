@@ -1,0 +1,25 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Room {
+  id         String   @id @default(uuid())
+  name       String?
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+  stroke     Stroke[]
+}
+
+model Stroke {
+  id         String   @id @default(uuid())
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+  path       Json
+  roomId     String
+  room       Room     @relation(fields: [roomId], references: [id])
+}

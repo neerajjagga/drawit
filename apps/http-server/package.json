@@ -1,0 +1,24 @@
+{
+  "name": "http-server",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc -b",
+    "dev": "concurrently \"tsc --watch\" \"nodemon dist/index.js --watch dist --ext js --legacy-watch\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/node": "^22.15.32",
+    "concurrently": "^9.2.0",
+    "nodemon": "^3.1.10"
+  },
+  "dependencies": {
+    "@repo/db": "*",
+    "express": "^5.1.0"
+  }
+}
